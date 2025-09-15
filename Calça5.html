@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Editor de Calça - Interativo</title>
+  <style>
+    canvas { border: 1px solid #aaa; cursor: crosshair; }
+    button { margin: 5px; }
+  </style>
+</head>
+<body>
+
+<h3>Editor de Calça</h3>
+<input type="file" id="imageLoader" accept="image/*" />
+<br>
+<button onclick="setMode('select')">🖐️ Selecionar</button>
+<button onclick="setMode('add')">➕ Adicionar Vértice</button>
+<button onclick="setMode('remove')">❌ Remover Vértice</button>
+<button onclick="exportClip()">✂️ Recortar</button>
+<br><br>
+
+<canvas id="editorCanvas" width="800" height="600"></canvas>
+<canvas id="outputCanvas" style="display:none;"></canvas>
+
+<script src="script.js"> </script>
+</body>
+</html>
